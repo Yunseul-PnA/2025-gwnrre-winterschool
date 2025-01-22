@@ -63,9 +63,7 @@ delta_shear = 5e-4
 u["g"][0] = 0.5 * (
     1.0 + np.tanh((y - 0.25) / delta_shear) + np.tanh(-(y + 0.25) / delta_shear)
 )
-u["g"][1] = 5e-3 * np.sin(2* np.pi * 2 * x) * (
-    np.exp(-(y - 0.25)**2 / delta_shear) + np.exp(-(y + 0.25)**2 / delta_shear)
-)
+
 
 # Match tracer to shear
 s["g"] = u["g"][0]
@@ -75,6 +73,9 @@ s["g"] = u["g"][0]
 # Add small vertical velocity perturbations localized to the shear layers
 # u["g"][1] = ...
 
+u["g"][1] = 5e-3 * np.sin(2* np.pi * 2 * x) * (
+    np.exp(-(y - 0.25)**2 / delta_shear) + np.exp(-(y + 0.25)**2 / delta_shear)
+)
 
 #######################################################################
 

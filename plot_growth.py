@@ -28,10 +28,10 @@ plt.legend()
 #############################
 
 plt.xlabel("Time", labelpad=10)
-plt.ylabel(r"$I$", labelpad=10)
+plt.ylabel(r"$lnI$", labelpad=10)
 
 plt.show()
 
-plt.savefig("InstabilityGrowth_estimatealpha.png", bbox_inches="tight", dpi=200)
+plt.savefig("InstabilityGrowth_ln.png", bbox_inches="tight", dpi=200)
 
 file.close()
